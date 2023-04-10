@@ -1,15 +1,9 @@
-def BR(a):
-    br = None
-    for i in range(len(a)):
-        if a[len(a)-1-i] < a[-1]:
-            br=len(a)-i
-            break
-    return br
-
 def BMW(a,n):
     if a[-1]==0:return a[:-1]
-    if BR(a)!=None: # If the bad root exists, search for it
-        b=a[BR(a):-1]
+    if a[-1]-1 in a:
+        k=-1
+        while a[k]>=a[-1]:k-=1
+        b=a[k:-1]
     else:
         b=a[:-1]+[a[-1]-1]
         k=0
