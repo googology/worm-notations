@@ -1,8 +1,7 @@
 def BR(a):
-    ret = False
     br = None
-    for i in range(len(a)+1):
-        if a[len(a)-i] < a[-1]:
+    for i in range(len(a)):
+        if a[len(a)-1-i] < a[-1]:
             br=len(a)-i
             break
     return br
